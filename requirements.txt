@@ -3,7 +3,6 @@ gunicorn==20.1.0
 itsdangerous==1.1.0
 Jinja2==2.11.1
 seaborn>=0.10.0
-re>=2.2.1
 tqdm>=4.42.1
 nltk>=3.4.5
 PIL>=7.0.0
