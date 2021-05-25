@@ -5,7 +5,6 @@ Jinja2==2.11.1
 seaborn>=0.10.0
 tqdm>=4.42.1
 nltk>=3.4.5
-PIL>=7.0.0
 numpy>=1.18.5
 scipy>=1.4.1
 scikit-learn>=0.24.1
