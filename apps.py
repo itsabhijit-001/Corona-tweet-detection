@@ -1,21 +1,21 @@
 from flask import   Flask, render_template,request
-import pickle
+# import pickle
 # import tensorflow as tf
 # from keras.preprocessing.sequence import pad_sequences
-from nltk.stem import WordNetLemmatizer
-import re
+# from nltk.stem import WordNetLemmatizer
+# import re
 # from tensorflow.keras.models import load_model
 # from keras.backend import set_session
 # from corona-tweet-sentiment-annalysis import Lemmatizer
 # import tensor
 
-class Lemmatizer(object):
-    def __init__(self):
-        self.lemmatizer = WordNetLemmatizer()
-    def __call__(self, sentence):
-        sentence=re.sub('(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)',' ',sentence)
-        sentence=re.sub('[^0-9a-z]',' ',sentence)
-        return [self.lemmatizer.lemmatize(word) for word in sentence.split() if len(word)>1]
+# class Lemmatizer(object):
+#     def __init__(self):
+#         self.lemmatizer = WordNetLemmatizer()
+#     def __call__(self, sentence):
+#         sentence=re.sub('(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)',' ',sentence)
+#         sentence=re.sub('[^0-9a-z]',' ',sentence)
+#         return [self.lemmatizer.lemmatize(word) for word in sentence.split() if len(word)>1]
 
 # tf_config = some_custom_config
 # sess = tf.Session()
@@ -23,9 +23,9 @@ class Lemmatizer(object):
 # graph = tf.get_default_graph()
 # set_session(sess)
 
-bagged_model=pickle.load(open('bagg_model1.pickle','rb'))
-bagged_lbl_encoder=pickle.load(open('encoder.pickle','rb'))
-bagg_tokenizer=pickle.load(open('bagg_token.pickle','rb'))
+bagged_model=pickle.load(open('bagged_model.pickle','rb'))
+bagged_lbl_encoder=pickle.load(open('bagged_encoder.pickle','rb'))
+bagg_tokenizer=pickle.load(open('bagged_tokenizer.pickle','rb'))
 # lstm_model=load_model('lstm_model.h5')
 
 app= Flask(__name__)
