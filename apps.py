@@ -1,5 +1,5 @@
 from flask import   Flask, render_template,request
-# import pickle
+import pickle
 # import tensorflow as tf
 # from keras.preprocessing.sequence import pad_sequences
 # from nltk.stem import WordNetLemmatizer
